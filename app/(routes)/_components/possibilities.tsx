@@ -7,6 +7,7 @@ import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { assets } from "@/public";
 import { possibilities } from "@/lib/static";
+import { useCreateRotation } from "@/hooks/useCreateRotation.hook";
 
 const Possibilities = () => {
   const targetRef = useRef<HTMLDivElement>(null);
@@ -23,16 +24,9 @@ const Possibilities = () => {
     offset: ["start start", "end end"],
   });
 
-  const createRotation = (multiplier: number, initialOffset: number) => {
-    return useTransform(scrollYProgress, (value) => {
-      const rotation = (value * 360 * multiplier + initialOffset) % 360;
-      return rotation - initialOffset;
-    });
-  };
-
-  const rotateOuter = createRotation(1, -12);
-  const rotateMiddle = createRotation(-1, 12);
-  const rotateInner = createRotation(2, 45);
+  const rotateOuter = useCreateRotation(scrollYProgress, 1, -12);
+  const rotateMiddle = useCreateRotation(scrollYProgress, -1, 12);
+  const rotateInner = useCreateRotation(scrollYProgress, 2, 45);
 
   return (
     <Fragment>

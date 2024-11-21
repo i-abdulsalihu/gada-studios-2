@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "delRun": "rm -rf node_modules && rm -rf .next && rm -rf bun.lockb && bun install && clear && next dev",
-    "dev": "rm -rf .next && clear && next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

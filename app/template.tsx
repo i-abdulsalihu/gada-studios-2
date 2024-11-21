@@ -16,7 +16,7 @@ export default function Template({
     <ReactLenis
       root
       options={{
-        lerp: 0.05, // 0.3
+        lerp: 0.09, // 0.3
         infinite: false,
         syncTouch: true,
         syncTouchLerp: 0.03,
