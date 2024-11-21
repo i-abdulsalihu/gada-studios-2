@@ -13,7 +13,7 @@ export const nekst = localFont({
       style: "normal",
     },
     {
-      path: "./Nekst/Nekst-regular.otf",
+      path: "./Nekst/Nekst-Regular.otf",
       weight: "400",
       style: "normal",
     },

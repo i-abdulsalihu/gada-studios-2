@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
-import { nekst } from "./fonts";
+import { nekst } from "@/fonts";
 
 import "./globals.css";
 import { siteConfig } from "@/config/site.config";

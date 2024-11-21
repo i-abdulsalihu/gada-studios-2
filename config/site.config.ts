@@ -1,7 +1,7 @@
 export const siteConfig = {
   title: "GADA Studios",
   description:
-    "GADA Studios is a brand and product design firm that specializes in creating powerful brands. They bridge the gap between business models and user demands by concentrating on the target market and guaranteeing user-centric solutions while respecting brand needs and stakeholders.",
+    "Carefully blending creativity with strategy, Gada offers progressive Transformation in  Software Development, Branding, Marketing And Communications, Architecture.",
   favicons: [
     { url: "/imgs/GADA_Studios_Favicon_16px_x_16px.png", sizes: "16x16" },
     { url: "/imgs/GADA_Studios_Favicon_32px_x_32px.png", sizes: "32x32" },
