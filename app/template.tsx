@@ -1,36 +1,41 @@
 "use client";
 
-import Footer from "@/components/shared/footer";
+import gsap from "gsap";
+import { ReactLenis } from "lenis/react";
+import { useEffect, useRef } from "react";
+import NextTopLoader from "nextjs-toploader";
+import type { LenisRef } from "lenis/react";
+
 import Header from "@/components/shared/header";
-import { ReactLenis } from "@studio-freight/react-lenis";
-import { Fragment, ReactNode } from "react";
+import Footer from "@/components/shared/footer";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function Template({
   children,
 }: Readonly<{
-  children: ReactNode;
+  children: React.ReactNode;
 }>) {
-  const smooth = true;
+  const lenisRef = useRef<LenisRef>(null);
 
-  return smooth ? (
-    <ReactLenis
-      root
-      options={{
-        lerp: 0.09, // 0.3
-        infinite: false,
-        syncTouch: true,
-        syncTouchLerp: 0.03,
-      }}
-    >
-      <Header />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </ReactLenis>
-  ) : (
-    <Fragment>
-      <Header />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </Fragment>
+  useEffect(() => {
+    function update(time: number) {
+      lenisRef.current?.lenis?.raf(time * 1000);
+    }
+
+    gsap.ticker.add(update);
+
+    return () => gsap.ticker.remove(update);
+  }, []);
+
+  return (
+    <>
+      <ReactLenis root options={{ autoRaf: false }} ref={lenisRef}>
+        <NextTopLoader color="var(--primary-500)" showSpinner={false} />
+        <Toaster richColors theme="light" />
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </ReactLenis>
+    </>
   );
 }

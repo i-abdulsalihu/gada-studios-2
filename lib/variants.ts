@@ -20,8 +20,8 @@ export const flickerEffects = [
 ];
 
 export const viewEffects: UseInViewOptions = {
-  once: true,
-  margin: "200px 0px -30% 0px",
+  once: false,
+  margin: "-30% 0px -30% 0px",
 };
 
 export const scaleAnimation = {

@@ -1,53 +1,85 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
 
-html,
-body,
 :root {
-  height: 100%;
-  cursor: url("/svgs/cursor.svg"), auto;
-  /* cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyMSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgZmlsdGVyPSJ1cmwoI2ZpbHRlcjBfZF84XzgxKSI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTcgOS41MDY3Nkw1IDRMNy44MzgxOCAxN0wxMS4zMDYyIDExLjg2NTRMMTcgOS41MDY3NloiIGZpbGw9IiMzNjNCM0UiLz4KPHBhdGggZD0iTTE3LjE5MTQgOS45Njg2OUwxOC4yNDk5IDkuNTMwMkwxNy4yMDg1IDkuMDUyMzJMNS4yMDg1NCAzLjU0NTU2TDQuMjk3NzYgMy4xMjc2MUw0LjUxMTUxIDQuMTA2NjVMNy4zNDk2OSAxNy4xMDY2TDcuNTk4ODEgMTguMjQ3N0w4LjI1MjUzIDE3LjI3OTlMMTEuNjM2NCAxMi4yNjk4TDE3LjE5MTQgOS45Njg2OVoiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1taXRlcmxpbWl0PSIxNiIvPgo8L2c+CjxkZWZzPgo8ZmlsdGVyIGlkPSJmaWx0ZXIwX2RfOF84MSIgeD0iMC41OTU1MiIgeT0iMC4yNTUyMjMiIHdpZHRoPSIxOS44MjE2IiBoZWlnaHQ9IjIzLjI0MDIiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY29sb3ItaW50ZXJwb2xhdGlvbi1maWx0ZXJzPSJzUkdCIj4KPGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz4KPGZlQ29sb3JNYXRyaXggaW49IlNvdXJjZUFscGhhIiB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMTI3IDAiIHJlc3VsdD0iaGFyZEFscGhhIi8+CjxmZU9mZnNldCBkeT0iMSIvPgo8ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIxLjUiLz4KPGZlQ29sb3JNYXRyaXggdHlwZT0ibWF0cml4IiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAuMjUgMCIvPgo8ZmVCbGVuZCBtb2RlPSJub3JtYWwiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9ImVmZmVjdDFfZHJvcFNoYWRvd184XzgxIi8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iZWZmZWN0MV9kcm9wU2hhZG93XzhfODEiIHJlc3VsdD0ic2hhcGUiLz4KPC9maWx0ZXI+CjwvZGVmcz4KPC9zdmc+Cg=="),
-    auto; */
+  --background: #111111;
+  --foreground: #ffffff;
+
+  --primary-50: #f8f5ee;
+  --primary-100: #efe7d2;
+  --primary-200: #e0cfa8;
+  --primary-300: #ceb076;
+  --primary-400: #bf9550;
+  --primary-500: #b88745;
+  --primary-600: #976637;
+  --primary-700: #794d2f;
+  --primary-800: #66412d;
+  --primary-900: #59372a;
+  --primary-950: #331d15;
+
+  --black-50: #f6f6f6;
+  --black-100: #e7e7e7;
+  --black-200: #d1d1d1;
+  --black-300: #b0b0b0;
+  --black-400: #888888;
+  --black-500: #6d6d6d;
+  --black-600: #5d5d5d;
+  --black-700: #4f4f4f;
+  --black-800: #454545;
+  --black-900: #3d3d3d;
+  --black-950: #000000;
 }
 
-@layer utilities {
-  .rounded-inherit {
-    @apply rounded-[inherit];
-  }
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
 
-  .mask {
-    @apply [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)];
-  }
+  --color-primary-50: var(--primary-50);
+  --color-primary-100: var(--primary-100);
+  --color-primary-200: var(--primary-200);
+  --color-primary-300: var(--primary-300);
+  --color-primary-400: var(--primary-400);
+  --color-primary-500: var(--primary-500);
+  --color-primary-600: var(--primary-600);
+  --color-primary-700: var(--primary-700);
+  --color-primary-800: var(--primary-800);
+  --color-primary-900: var(--primary-900);
+  --color-primary-950: var(--primary-950);
 
-  .mask-text {
-    position: absolute;
-    mask-image: url("/svgs/mask.svg");
-    background: #b88745;
-    mask-repeat: no-repeat;
-    mask-size: 0;
-    color: #0c0c0c;
-  }
+  --color-black-50: var(--black-50);
+  --color-black-100: var(--black-100);
+  --color-black-200: var(--black-200);
+  --color-black-300: var(--black-300);
+  --color-black-400: var(--black-400);
+  --color-black-500: var(--black-500);
+  --color-black-600: var(--black-600);
+  --color-black-700: var(--black-700);
+  --color-black-800: var(--black-800);
+  --color-black-900: var(--black-900);
+  --color-black-950: var(--black-950);
 }
 
 @layer base {
-  :root {
-    --radius: 0.5rem;
+  body {
+    @apply bg-background text-foreground bg-[url('/images/noise.png')] bg-fixed bg-repeat;
+  }
+
+  h1,
+  .heading-1 {
+    @apply text-5xl font-black md:text-6xl lg:text-8xl;
+  }
+
+  h2,
+  .heading-2 {
+    @apply text-2xl font-black md:text-5xl lg:text-7xl;
+  }
+
+  h3,
+  .heading-3 {
+    @apply text-xl md:text-3xl lg:text-5xl;
   }
 
   *::-webkit-scrollbar {
-    @apply hidden;
-  }
-
-  body {
-    @apply bg-[#0c0c0c] bg-[url('/imgs/noise.png')] bg-fixed bg-repeat font-neskt text-white;
-  }
-
-  h1 {
-    @apply text-[43px] font-black leading-[43px] md:text-6xl lg:text-8xl;
-  }
-
-  h2 {
-    @apply text-2xl font-black leading-[43px] md:text-5xl lg:text-7xl;
+    @apply !hidden;
   }
 }
