@@ -9,11 +9,13 @@ import { Button } from "@/components/ui/button";
 interface CTAProps {
   imgUrl?: string;
   className?: string;
+  title?: string;
 }
 
 const CTA: FC<CTAProps> = ({
   className,
   imgUrl = "/images/expertise-cta.jpeg",
+  title,
 }) => {
   return (
     <div className="relative mt-[100px] flex h-[559px] items-center 2xl:h-[669px]">
@@ -35,7 +37,7 @@ const CTA: FC<CTAProps> = ({
       <Wrapper className="py-48">
         <div className="z-10 flex w-full max-w-[604px] flex-col gap-2">
           <p className="text-4xl leading-11 font-medium text-white">
-            Let&apos;s Chat About Your Brand and Marketing Goals
+            {title || "Let's Chat About Your Brand and Marketing Goals"}
           </p>
           <Button size="lg" className="w-max px-6">
             <span className="font-normal">Contact Us Today</span>

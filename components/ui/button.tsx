@@ -12,7 +12,7 @@ const buttonVariants = cva(
         0: "bg-white hover:bg-white/80 text-black-950 hover:text-black-950/80 border-black-950",
         100: "border-primary-400 bg-primary-100 text-primary-400 hover:bg-primary-100/80",
         101: "border-primary-200 text-primary-200 bg-transparent",
-        500: "border-transparent bg-primary-500 text-white hover:bg-primary-500/80",
+        500: "border-transparent bg-primary-500 text-white hover:bg-primary-500/80 text-[#212121]",
         501: "border-primary-500 text-primary-500 bg-transparent",
         600: "border-transparent bg-primary-600 text-white hover:bg-primary-600/80",
         601: "border-primary-600 text-primary-600 bg-transparent",

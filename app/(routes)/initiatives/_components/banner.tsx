@@ -1,3 +1,5 @@
+"use client";
+
 import Wrapper from "@/components/shared/wrapper";
 
 const InitiativesBanner = () => {

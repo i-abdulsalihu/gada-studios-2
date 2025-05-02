@@ -18,10 +18,10 @@ const Balance = () => {
         </div>
 
         <Wrapper className="relative h-[715px]">
-          <div className="bg-black-800 relative mx-auto mt-[98px] h-[273px] w-[536px]">
+          <div className="bg-black-800 relative mx-auto mt-[98px] h-[353px] w-[536px]">
             <Image
-              src="/images/Gk5Ay7oXUAAzXhX.png"
-              alt="jp"
+              src="/images/mission-1.jpg"
+              alt="ONE"
               priority
               quality={100}
               objectFit="cover"
@@ -30,8 +30,8 @@ const Balance = () => {
           </div>
           <div className="bg-black-800 absolute top-[98px] left-[160px] h-[126px] w-[208px]">
             <Image
-              src="/images/Gk5Ay7oXUAAzXhX.png"
-              alt="jp"
+              src="/images/mission-2.jpg"
+              alt="TWO"
               priority
               quality={100}
               objectFit="cover"
@@ -40,8 +40,8 @@ const Balance = () => {
           </div>
           <div className="bg-black-800 absolute bottom-0 left-10 size-[224px]">
             <Image
-              src="/images/Gk5Ay7oXUAAzXhX.png"
-              alt="jp"
+              src="/images/mission-3.jpg"
+              alt="THREE"
               priority
               quality={100}
               objectFit="cover"
@@ -50,8 +50,8 @@ const Balance = () => {
           </div>
           <div className="bg-black-800 absolute right-10 bottom-[98px] h-[126px] w-[224px]">
             <Image
-              src="/images/Gk5Ay7oXUAAzXhX.png"
-              alt="jp"
+              src="/images/mission-4.jpg"
+              alt="FOUR"
               priority
               quality={100}
               objectFit="cover"

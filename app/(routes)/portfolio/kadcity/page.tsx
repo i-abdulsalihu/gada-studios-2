@@ -69,9 +69,36 @@ export default function KadCityPage() {
       </div>
 
       <div className="py-[90px]">
-        <div className="bg-black-600 h-[296px] w-full"></div>
-        <div className="bg-black-700 h-[580px] w-full"></div>
-        <div className="bg-black-800 h-[401px] w-full"></div>
+        <div className="relative h-[296px] w-full overflow-hidden bg-white">
+          <Image
+            src="/images/projects/kadcity-img-1.png"
+            alt="kadcity-img-1"
+            priority
+            quality={100}
+            objectFit="contain"
+            fill
+          />
+        </div>
+        <div className="bg-black-700 relative h-[580px] w-full overflow-hidden">
+          <Image
+            src="/images/projects/kadcity-img-2.png"
+            alt="kadcity-img-2"
+            priority
+            quality={100}
+            objectFit="cover"
+            fill
+          />
+        </div>
+        <div className="relative h-[401px] w-full overflow-hidden bg-white">
+          <Image
+            src="/images/projects/kadcity-img-3.jpg"
+            alt="kadcity-img-3"
+            priority
+            quality={100}
+            fill
+            objectFit="contain"
+          />
+        </div>
 
         <Wrapper className="mt-7">
           <div className="ml-auto flex max-w-[541px] flex-col gap-4">
@@ -92,8 +119,26 @@ export default function KadCityPage() {
             <p className="text-xl font-black">Brand Identity</p>
 
             <div className="flex h-[350px] gap-5">
-              <div className="bg-black-800 h-full w-[446px] rounded-lg"></div>
-              <div className="bg-black-800 h-full flex-1 rounded-lg"></div>
+              <div className="bg-black-800 relative h-full w-[446px] overflow-hidden rounded-lg">
+                <Image
+                  src="/images/projects/kadcity-identity-1.png"
+                  alt="kadcity-identity-1"
+                  priority
+                  quality={100}
+                  objectFit="cover"
+                  fill
+                />
+              </div>
+              <div className="bg-black-800 relative h-full flex-1 overflow-hidden rounded-lg">
+                <Image
+                  src="/images/projects/kadcity-identity-2.png"
+                  alt="kadcity-identity-2"
+                  priority
+                  quality={100}
+                  objectFit="cover"
+                  fill
+                />
+              </div>
             </div>
 
             <p className="max-w-[633px] text-xl font-normal">
@@ -108,7 +153,16 @@ export default function KadCityPage() {
           <div className="bg-black-800 h-full w-[565px]"></div>
         </div>
         <div className="mx-auto flex h-[568px] w-[645px] items-center justify-center">
-          <div className="bg-black-800 h-full w-[461px]"></div>
+          <div className="bg-black-800 relative h-full w-[461px] overflow-hidden">
+            <Image
+              src="/images/projects/kadcity-identity-3.png"
+              alt="kadcity-identity-3"
+              priority
+              quality={100}
+              objectFit="cover"
+              fill
+            />
+          </div>
         </div>
         <div className="absolute top-1/2 -right-1/5 mx-auto flex h-[456px] w-[760px] -translate-y-1/2 items-center justify-center">
           <div className="bg-black-800 h-full w-[565px]"></div>

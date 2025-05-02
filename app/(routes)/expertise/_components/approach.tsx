@@ -9,7 +9,7 @@ import { flickerEffects, viewEffects } from "@/lib/variants";
 const Approach = () => {
   const ref = useRef(null);
 
-  const isInView1 = useInView(ref, viewEffects);
+  const isInView = useInView(ref, viewEffects);
 
   return (
     <div className="flex flex-col py-[100px]">
@@ -41,12 +41,10 @@ const Approach = () => {
         >
           <motion.span
             animate={
-              isInView1
-                ? { opacity: flickerEffects[0].opacity }
-                : { opacity: 0 }
+              isInView ? { opacity: flickerEffects[0].opacity } : { opacity: 0 }
             }
             transition={
-              isInView1
+              isInView
                 ? {
                     duration: flickerEffects[0].duration,
                     ease: "easeInOut",

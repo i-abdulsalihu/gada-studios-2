@@ -133,7 +133,11 @@ export default function OurExpertise() {
       <div className="py-[100px] md:py-[239px]">
         <Wrapper className="grid grid-cols-1 gap-x-5 gap-y-12 md:grid-cols-2">
           {expertise.map((exp, _index) => (
-            <Link href={exp.path} key={_index} className="flex flex-col gap-10">
+            <Link
+              href={`/expertise/${exp.path}`}
+              key={_index}
+              className="flex flex-col gap-10"
+            >
               <div className="bg-black-200 h-[400px] w-full"></div>
               <div className="flex flex-col gap-4">
                 <h4 className="text-[40px] font-extrabold">{exp.title}</h4>

@@ -1,7 +1,7 @@
 // className="flex gap-6 [&:nth-child(2n)]:ml-auto [&:nth-child(2n)]:flex-row-reverse"
 "use client";
 
-import type { FC } from "react";
+import { type FC } from "react";
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
